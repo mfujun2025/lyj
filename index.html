@@ -15,44 +15,44 @@
         /* 头部导航 */
         header{background:#16325c;color:#fff;padding:16px 0;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
         .header-box{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;}
-        .logo{font-size:26px;font-weight:bold;letter-spacing:1px;}
-        nav a{color:#fff;text-decoration:none;margin-left:26px;font-size:16px;transition:0.2s;}
+        .logo{font-size:26px;font-weight:bold;}
+        nav a{color:#fff;text-decoration:none;margin-left:26px;}
         nav a:first-child{margin-left:0;}
         nav a:hover{color:#ff7722;}
 
-        /* 主体区域 */
-        .main{display:flex;gap:30px;margin:40px 0;}
-        .article-list{flex:1;}
-        .sidebar{width:280px;}
+        /* 主体内容布局：文章区+侧边栏 */
+        .main-wrap{display:flex;gap:30px;margin:40px 0;flex-wrap:wrap;}
+        .article-list{flex:1;min-width:650px;}
+        .sidebar{width:280px;min-width:280px;}
 
-        /* 资讯卡片 */
-        .card{background:#fff;padding:24px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin-bottom:22px;}
-        .card h2{font-size:20px;margin-bottom:12px;}
-        .card h2 a{color:#16325c;text-decoration:none;}
-        .card h2 a:hover{color:#ff7722;}
-        .info{font-size:14px;color:#888;margin-bottom:12px;}
-        .desc{color:#555;margin-bottom:15px;}
+        /* 文章卡片样式 */
+        .art-card{background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin-bottom:25px;}
+        .art-card h2 a{color:#16325c;text-decoration:none;font-size:22px;line-height:1.4;}
+        .art-card h2 a:hover{color:#ff7722;}
+        .art-meta{font-size:14px;color:#888;margin:12px 0 15px;}
+        .art-desc{color:#555;line-height:1.8;margin-bottom:15px;}
         .read-more{color:#ff7722;text-decoration:none;font-weight:500;}
         .read-more:hover{text-decoration:underline;}
 
-        /* 侧边栏 */
-        .side-box{background:#fff;border-radius:10px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin-bottom:25px;}
-        .side-title{font-size:18px;color:#16325c;border-left:4px solid #ff7722;padding-left:10px;margin-bottom:16px;}
-        .side-list li{list-style:none;margin-bottom:12px;}
-        .side-list a{color:#444;text-decoration:none;}
-        .side-list a:hover{color:#ff7722;}
-        .tip-text{background:#fff6ec;padding:15px;border-radius:6px;line-height:1.8;}
-        .tip-text a{color:#ff5500;font-weight:500;text-decoration:none;}
+        /* 侧边栏热门栏目 */
+        .side-box{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,0.05);}
+        .side-title{font-size:18px;color:#16325c;padding-bottom:12px;border-bottom:1px solid #eee;margin-bottom:18px;}
+        .hot-list li{list-style:none;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed #eee;}
+        .hot-list li:last-child{border:none;margin-bottom:0;padding-bottom:0;}
+        .hot-list a{color:#333;text-decoration:none;}
+        .hot-list a:hover{color:#ff7722;}
 
         /* 页脚 */
         footer{background:#222;color:#aaa;text-align:center;padding:35px 0;margin-top:20px;font-size:14px;}
 
-        /* 移动端适配 */
-        @media screen and (max-width: 768px){
-            .main{flex-direction:column;}
-            .sidebar{width:100%;}
-            nav{margin-top:10px;}
-            nav a{margin:0 10px;}
+        /* 移动端自适应 */
+        @media screen and (max-width: 960px){
+            .main-wrap{flex-direction:column;}
+            .article-list,.sidebar{width:100%;min-width:100%;}
+        }
+        @media screen and (max-width: 640px){
+            .art-card{padding:20px;}
+            .art-card h2 a{font-size:19px;}
         }
     </style>
 </head>
@@ -64,30 +64,22 @@
             <a href="index.html">首页</a>
             <a href="#article">资讯科普</a>
             <a href="vacuum-oil-filter.html">真空滤油机</a>
-            <a href="transformer-oil-purifier.html">变压器滤油机</a>
         </nav>
     </div>
 </header>
 
-<div class="container main">
-    <!-- 文章列表容器，JS自动填充内容 -->
-    <div class="article-list" id="article">
-    </div>
-
-    <!-- 右侧侧边栏 -->
-    <div class="sidebar">
-        <div class="side-box">
-            <h3 class="side-title">热门文章</h3>
-            <ul class="side-list" id="hotList">
-                <!-- JS自动渲染热门 -->
-            </ul>
+<div class="container">
+    <div class="main-wrap">
+        <!-- 文章列表主区域 -->
+        <div class="article-list" id="articleBox">
+            <h2 style="margin-bottom:20px;color:#16325c;">最新资讯</h2>
         </div>
 
-        <div class="side-box">
-            <h3 class="side-title">采购咨询</h3>
-            <div class="tip-text">
-                工业批量采购真空滤油机、变压器滤油机、液压油净化设备，需要工况方案、参数配置与报价，可前往
-                <a href="https://滤油机.cn" target="_blank">滤油机.cn</a> 获取专业选型方案。
+        <!-- 侧边热门推荐 -->
+        <div class="sidebar">
+            <div class="side-box">
+                <h3 class="side-title">热门文章</h3>
+                <ul class="hot-list" id="hotBox"></ul>
             </div>
         </div>
     </div>
@@ -100,59 +92,71 @@
 </footer>
 
 <script>
-// ========== 新增文章只在这里添加一条数据即可 ==========
-// date 格式统一：YYYY-MM-DD，系统会自动从新到旧排序
+// 7篇文章完整数组，按时间从新到旧排序（最新放最顶部）
 const articleData = [
     {
+        title: "工业废油再生处理流程，滤油机的核心作用",
+        url: "waste-oil-regeneration.html",
+        date: "2026-08-13",
+        desc: "工业废油直接丢弃既浪费资源又污染环境，本文详细讲解废油再生整套工艺流程，解析滤油机在脱水、除杂、油品还原中的关键作用，附带选购参考要点。"
+    },
+    {
+        title: "滤油机滤芯更换周期与维护技巧，延长设备使用寿命",
+        url: "oil-filter-maintain.html",
+        date: "2026-08-12",
+        desc: "滤芯是滤油机核心耗材，不同工况更换周期差异很大，分享日常检查、保养方法，规避堵塞、过滤失效问题，降低设备运维成本。"
+    },
+    {
+        title: "双级真空滤油机和单级区别对比，电力行业该怎么选",
+        url: "double-stage-oil-filter.html",
+        date: "2026-08-11",
+        desc: "拆解单级、双级真空滤油机结构、真空效率、适用场景差异，重点针对变电站高压变压器油净化场景给出清晰选型方案。"
+    },
+    {
         title: "滤油机常见故障排查：噪音大、真空不足、出油慢解决办法",
-        link: "oil-filter-fault-repair.html",
+        url: "oil-filter-fault-repair.html",
         date: "2026-08-10",
-        cate: "故障维修",
-        desc: "滤油机长期使用容易出现真空度不够、机身异响、出油流量偏低、加热不升温等故障，大多是滤芯堵塞、真空泵老化、管路漏气导致，本文逐一讲解原因与简易检修方案..."
+        desc: "汇总现场最频发的四类故障：异响震动、真空度不够、出油流量低、加热失灵，逐一说明诱因和简易现场检修方案。"
     },
     {
         title: "真空滤油机选购指南：参数、工况、型号怎么挑选不踩坑",
-        link: "vacuum-oil-filter-selection.html",
+        url: "vacuum-oil-filter-selection.html",
         date: "2026-08-10",
-        cate: "滤油机选型",
-        desc: "真空滤油机广泛应用于电力、液压设备、电厂、钢厂等场景，不同油品处理需求对应的流量、真空度、加热温度参数差异很大，新手采购很容易出现设备出力不足、脱水脱气效果差等问题，本文详细拆解选购核心要点..."
+        desc: "采购真空滤油机必看四大核心参数，区分电力、工厂液压、钢厂废油再生不同工况选型标准，避开低价低配选购误区。"
     },
     {
         title: "变压器滤油机使用规范与油品日常保养技巧",
-        link: "transformer-oil-maintain.html",
+        url: "transformer-oil-maintain.html",
         date: "2026-08-08",
-        cate: "设备保养",
-        desc: "变电站、配电室变压器油受潮、产生杂质、酸化后会大幅降低绝缘性能，定期使用滤油机净化是保障电力安全的关键。正确的开机流程、滤芯更换周期、停机养护方式能有效延长设备使用寿命..."
+        desc: "变压器绝缘油受潮会引发短路隐患，详述滤油机标准开机循环流程、油品定期检测养护细则，保障变电站设备稳定运行。"
     },
     {
         title: "液压油滤油机作用：工业液压系统为何必须定期滤油",
-        link: "hydraulic-oil-filter-intro.html",
+        url: "hydraulic-oil-filter-intro.html",
         date: "2026-08-05",
-        cate: "基础知识",
-        desc: "工程机械、注塑机、机床液压油混入水分、金属粉尘会造成油泵磨损、阀组卡顿、设备故障频发，液压专用滤油机可以快速去除杂质、水分、胶质，稳定油品粘度，降低维修成本..."
+        desc: "液压油进水、混入杂质会造成油泵磨损、阀组卡顿，讲解滤油机脱水除气净化原理，划分不同场景合理滤油周期。"
     }
 ];
 
-// 按日期降序排序（最新的排在最上面）
-articleData.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-// 渲染首页文章列表
-const articleWrap = document.getElementById('article');
+// 渲染主页文章列表
+const articleBox = document.getElementById('articleBox');
 articleData.forEach(item => {
-    articleWrap.innerHTML += `
-        <div class="card">
-            <h2><a href="${item.link}">${item.title}</a></h2>
-            <div class="info">发布时间：${item.date} | 分类：${item.cate}</div>
-            <div class="desc">${item.desc}</div>
-            <a href="${item.link}" class="read-more">阅读全文 →</a>
+    let html = `
+        <div class="art-card">
+            <h2><a href="${item.url}">${item.title}</a></h2>
+            <div class="art-meta">发布时间：${item.date}</div>
+            <p class="art-desc">${item.desc}</p>
+            <a href="${item.url}" class="read-more">查看全文 →</a>
         </div>
     `;
+    articleBox.innerHTML += html;
 });
 
-// 侧边栏热门文章：取前3篇最新
-const hotWrap = document.getElementById('hotList');
-articleData.slice(0,3).forEach(item => {
-    hotWrap.innerHTML += `<li><a href="${item.link}">${item.title}</a></li>`;
+// 侧边热门：取前3篇最新文章
+const hotBox = document.getElementById('hotBox');
+const hotList = articleData.slice(0,3);
+hotList.forEach(item => {
+    hotBox.innerHTML += `<li><a href="${item.url}">${item.title}</a></li>`;
 });
 </script>
 </body>
