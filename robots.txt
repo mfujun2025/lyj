@@ -1,0 +1,7 @@
+# 滤油机资讯站 robots.txt
+User-agent: *
+Allow: /
+Disallow:
+
+# 告诉百度爬虫 sitemap 地址
+Sitemap: https://滤油机.中国/sitemap.xml
