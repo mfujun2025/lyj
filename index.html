@@ -113,7 +113,7 @@ var _hmt = _hmt || [];
 </footer>
 
 <script>
-// 全部文章数据（最新置顶）
+// ========== 全部文章数组【13篇完整齐全｜新增文章放最顶部】==========
 const articleData = [
     {
         title: "真空滤油机正确操作流程与安全禁忌，新手必看运维指南",
@@ -189,11 +189,11 @@ const articleData = [
     }
 ];
 
-// 分页配置
-const pageSize = 6; // 每页6篇
+// 分页配置：每页6篇
+const pageSize = 6;
 let nowPage = 1;
 
-// 获取URL页码
+// 读取URL分页参数 ?page=2
 let urlPage = new URLSearchParams(location.search).get('page');
 if(urlPage) nowPage = parseInt(urlPage);
 
@@ -218,18 +218,15 @@ function renderList(){
     box.innerHTML = html;
 }
 
-// 生成分页按钮
+// 分页按钮
 function renderPage(){
     const pageBox = document.getElementById('pageBox');
     const totalPage = Math.ceil(articleData.length / pageSize);
     let pageHtml = '';
 
-    // 上一页
     if(nowPage > 1){
         pageHtml += `<a href="?page=${nowPage-1}">上一页</a>`;
     }
-
-    // 页码
     for(let i=1;i<=totalPage;i++){
         if(i === nowPage){
             pageHtml += `<a class="active">${i}</a>`;
@@ -237,16 +234,13 @@ function renderPage(){
             pageHtml += `<a href="?page=${i}">${i}</a>`;
         }
     }
-
-    // 下一页
     if(nowPage < totalPage){
         pageHtml += `<a href="?page=${nowPage+1}">下一页</a>`;
     }
-
     pageBox.innerHTML = pageHtml;
 }
 
-// 侧边热门（永远取最新3篇）
+// 侧边热门（取最新3篇）
 function renderHot(){
     const hotBox = document.getElementById('hotBox');
     const hotList = articleData.slice(0,3);
@@ -261,6 +255,6 @@ function renderHot(){
 renderList();
 renderPage();
 renderHot();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</body>
+</html>
