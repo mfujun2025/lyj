@@ -6,9 +6,9 @@
     <title>滤油机资讯网 | 真空滤油机、液压油滤油机选型、保养知识科普</title>
     <meta name="keywords" content="滤油机,真空滤油机,液压油滤油机,变压器滤油机,滤油机选型,滤油机保养">
     <meta name="description" content="滤油机资讯平台，专注分享真空滤油机、变压器油滤油机、液压油滤油机选购技巧、设备原理、日常维护保养、工业用油净化方案科普内容。">
-    <link rel="canonical" href="https://news.滤油机.中国/index.html">
+    <link rel="canonical" href="https://滤油机.中国/index.html">
 
-    <!-- 百度统计代码 -->
+    <!-- 百度统计 -->
     <script>
 var _hmt = _hmt || [];
 (function() {
@@ -32,12 +32,12 @@ var _hmt = _hmt || [];
         nav a:first-child{margin-left:0;}
         nav a:hover{color:#ff7722;}
 
-        /* 主体内容布局：文章区+侧边栏 */
+        /* 主体布局 */
         .main-wrap{display:flex;gap:30px;margin:40px 0;flex-wrap:wrap;}
         .article-list{flex:1;min-width:650px;}
         .sidebar{width:280px;min-width:280px;}
 
-        /* 文章卡片样式 */
+        /* 文章卡片 */
         .art-card{background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin-bottom:25px;}
         .art-card h2 a{color:#16325c;text-decoration:none;font-size:22px;line-height:1.4;}
         .art-card h2 a:hover{color:#ff7722;}
@@ -46,7 +46,7 @@ var _hmt = _hmt || [];
         .read-more{color:#ff7722;text-decoration:none;font-weight:500;}
         .read-more:hover{text-decoration:underline;}
 
-        /* 侧边栏热门栏目 */
+        /* 侧边栏 */
         .side-box{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,0.05);}
         .side-title{font-size:18px;color:#16325c;padding-bottom:12px;border-bottom:1px solid #eee;margin-bottom:18px;}
         .hot-list li{list-style:none;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed #eee;}
@@ -54,10 +54,16 @@ var _hmt = _hmt || [];
         .hot-list a{color:#333;text-decoration:none;}
         .hot-list a:hover{color:#ff7722;}
 
+        /* 分页样式 */
+        .page-box{text-align:center;margin:50px 0;}
+        .page-box a{display:inline-block;padding:9px 16px;margin:0 4px;background:#fff;color:#16325c;text-decoration:none;border-radius:6px;border:1px solid #eee;}
+        .page-box a.active{background:#16325c;color:#fff;border-color:#16325c;}
+        .page-box a:hover{color:#ff7722;border-color:#ff7722;}
+
         /* 页脚 */
         footer{background:#222;color:#aaa;text-align:center;padding:35px 0;margin-top:20px;font-size:14px;}
 
-        /* 移动端自适应 */
+        /* 移动端适配 */
         @media screen and (max-width: 960px){
             .main-wrap{flex-direction:column;}
             .article-list,.sidebar{width:100%;min-width:100%;}
@@ -65,6 +71,7 @@ var _hmt = _hmt || [];
         @media screen and (max-width: 640px){
             .art-card{padding:20px;}
             .art-card h2 a{font-size:19px;}
+            .page-box a{padding:7px 12px;font-size:14px;margin:0 2px;}
         }
     </style>
 </head>
@@ -82,12 +89,11 @@ var _hmt = _hmt || [];
 
 <div class="container">
     <div class="main-wrap">
-        <!-- 文章列表主区域 -->
         <div class="article-list" id="articleBox">
             <h2 style="margin-bottom:20px;color:#16325c;">最新资讯</h2>
         </div>
 
-        <!-- 侧边热门推荐 -->
+        <!-- 侧边热门 -->
         <div class="sidebar">
             <div class="side-box">
                 <h3 class="side-title">热门文章</h3>
@@ -95,37 +101,43 @@ var _hmt = _hmt || [];
             </div>
         </div>
     </div>
+
+    <!-- 分页容器 -->
+    <div class="page-box" id="pageBox"></div>
 </div>
 
 <footer>
     <div class="container">
-        <p>© 2026 滤油机资讯网 news.滤油机.中国 | 工业滤油设备科普、选型、保养知识分享</p>
+        <p>© 2026 滤油机资讯网 滤油机.中国 | 工业滤油设备科普、选型、保养知识分享</p>
     </div>
 </footer>
 
 <script>
-// 8篇文章完整数组，最新文章置顶
+// 全部文章数据（最新置顶）
 const articleData = [
-{
-    title: "真空滤油机正确操作流程与安全禁忌，新手必看运维指南",
-    url: "2026-08-17.html",
-    date: "2026-08-17",
-    desc: "详解真空滤油机开机、运行、停机标准操作流程，汇总新手高频错误与安全禁忌，规范日常运维，有效规避设备故障与安全隐患。"
-},{
-    title: "滤油机常见类型对比：真空、板框、离心、聚结滤油机怎么选",
-    url: "2026-08-16.html",
-    date: "2026-08-16",
-    desc: "工业主流四种滤油机详细对比，涵盖真空、板框、离心、聚结滤油机原理优缺点与适用场景，帮助企业快速精准选型、避免设备踩坑。"
-}, {
-    title: "滤油机是什么设备？工业滤油机工作原理与完整用途科普",
-    url: "2026-08-15.html",
-    date: "2026-08-15",
-    desc: "详细科普滤油机是什么设备、核心工作原理、分类及工业用途，讲解真空滤油机如何去除水分杂质，保障工业油品稳定运行。"
-},   {
+    {
+        title: "真空滤油机正确操作流程与安全禁忌，新手必看运维指南",
+        url: "2026-08-17.html",
+        date: "2026-08-17",
+        desc: "详解真空滤油机开机、运行、停机标准操作流程，汇总新手高频错误与安全禁忌，规范日常运维，有效规避设备故障与安全隐患。"
+    },
+    {
+        title: "滤油机常见类型对比：真空、板框、离心、聚结滤油机怎么选",
+        url: "2026-08-16.html",
+        date: "2026-08-16",
+        desc: "工业主流四种滤油机详细对比，涵盖真空、板框、离心、聚结滤油机原理优缺点与适用场景，帮助企业快速精准选型、避免设备踩坑。"
+    },
+    {
+        title: "滤油机是什么设备？工业滤油机工作原理与完整用途科普",
+        url: "2026-08-15.html",
+        date: "2026-08-15",
+        desc: "详细科普滤油机是什么设备、核心工作原理、分类及工业用途，讲解真空滤油机如何去除水分杂质，保障工业油品稳定运行。"
+    },
+    {
         title: "2026-08-14 滤油机行业应用新趋势及选购注意事项",
         url: "2026-08-14.html",
         date: "2026-08-14",
-        desc: "2026年滤油机行业朝着智能化、高效化、节能化方向发展，本文解析行业新趋势，同时给出不同场景选购注意事项，助力用户精准选型..."
+        desc: "2026年滤油机行业朝着智能化、高效化、节能化方向发展，本文解析行业新趋势，同时给出不同场景选购注意事项，助力用户精准选型。"
     },
     {
         title: "工业废油再生处理流程，滤油机的核心作用",
@@ -168,29 +180,87 @@ const articleData = [
         url: "hydraulic-oil-filter-intro.html",
         date: "2026-08-05",
         desc: "液压油进水、混入杂质会造成油泵磨损、阀组卡顿，讲解滤油机脱水除气净化原理，划分不同场景合理滤油周期。"
+    },
+    {
+        title: "真空滤油机介绍、工作原理与使用场景详解",
+        url: "vacuum-oil-filter.html",
+        date: "2026-08-10",
+        desc: "详细介绍真空滤油机的核心结构、工作原理、优势特点与工业适用场景，帮助用户全面了解真空滤油机的净化能力与应用价值。"
     }
 ];
 
-// 渲染主页文章列表
-const articleBox = document.getElementById('articleBox');
-articleData.forEach(item => {
-    let html = `
+// 分页配置
+const pageSize = 6; // 每页6篇
+let nowPage = 1;
+
+// 获取URL页码
+let urlPage = new URLSearchParams(location.search).get('page');
+if(urlPage) nowPage = parseInt(urlPage);
+
+// 渲染文章列表
+function renderList(){
+    const box = document.getElementById('articleBox');
+    let start = (nowPage - 1) * pageSize;
+    let end = start + pageSize;
+    let currList = articleData.slice(start, end);
+
+    let html = '<h2 style="margin-bottom:20px;color:#16325c;">最新资讯</h2>';
+    currList.forEach(item=>{
+        html += `
         <div class="art-card">
             <h2><a href="${item.url}">${item.title}</a></h2>
             <div class="art-meta">发布时间：${item.date}</div>
             <p class="art-desc">${item.desc}</p>
             <a href="${item.url}" class="read-more">查看全文 →</a>
         </div>
-    `;
-    articleBox.innerHTML += html;
-});
+        `;
+    });
+    box.innerHTML = html;
+}
 
-// 侧边热门：取前3篇最新文章
-const hotBox = document.getElementById('hotBox');
-const hotList = articleData.slice(0,3);
-hotList.forEach(item => {
-    hotBox.innerHTML += `<li><a href="${item.url}">${item.title}</a></li>`;
-});
-</script>
-</body>
-</html>
+// 生成分页按钮
+function renderPage(){
+    const pageBox = document.getElementById('pageBox');
+    const totalPage = Math.ceil(articleData.length / pageSize);
+    let pageHtml = '';
+
+    // 上一页
+    if(nowPage > 1){
+        pageHtml += `<a href="?page=${nowPage-1}">上一页</a>`;
+    }
+
+    // 页码
+    for(let i=1;i<=totalPage;i++){
+        if(i === nowPage){
+            pageHtml += `<a class="active">${i}</a>`;
+        }else{
+            pageHtml += `<a href="?page=${i}">${i}</a>`;
+        }
+    }
+
+    // 下一页
+    if(nowPage < totalPage){
+        pageHtml += `<a href="?page=${nowPage+1}">下一页</a>`;
+    }
+
+    pageBox.innerHTML = pageHtml;
+}
+
+// 侧边热门（永远取最新3篇）
+function renderHot(){
+    const hotBox = document.getElementById('hotBox');
+    const hotList = articleData.slice(0,3);
+    let html = '';
+    hotList.forEach(item=>{
+        html += `<li><a href="${item.url}">${item.title}</a></li>`;
+    });
+    hotBox.innerHTML = html;
+}
+
+// 初始化
+renderList();
+renderPage();
+renderHot();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
