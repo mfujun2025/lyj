@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>油液清洁度等级怎么看？ISO4406与NAS对照及滤油目标讲清楚</title>
+<meta name="keywords" content="油液清洁度等级,ISO4406清洁度代码,NAS1638等级,液压油颗粒度,滤油目标精度,过滤后验收指标">
+<meta name="description" content="油液清洁度等级怎么看？本文讲清ISO 4406三段代码读法与NAS 1638等级对照，列出伺服阀、比例阀、泵组和常规液压系统的参考目标，以及滤油后取样验收步骤，帮助运维看懂颗粒度检测报告。">
+<link rel="canonical" href="https://滤油机.中国/2026-11-17.html">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72b49dfd810d38b445d9b1ef63f81d4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft Yahei",system-ui,sans-serif;background:#f5f7f9;color:#333;line-height:1.8;font-size:17px;}
+.container{max-width:1100px;margin:0 auto;padding:0 15px;}
+header{background:#16325c;color:#fff;padding:16px 0;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+.header-box{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;}
+.logo{font-size:26px;font-weight:bold;}
+nav a{color:#fff;text-decoration:none;margin-left:26px;}
+nav a:first-child{margin-left:0;}
+nav a:hover{color:#ff7722;}
+article{background:#fff;padding:40px 35px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin:45px auto;max-width:840px;}
+.back{color:#ff7722;text-decoration:none;margin-bottom:25px;display:inline-block;font-weight:500;}
+h1{font-size:28px;color:#16325c;margin-bottom:20px;line-height:1.4;}
+.art-info{font-size:14px;color:#888;margin-bottom:28px;padding-bottom:15px;border-bottom:1px solid #eee;}
+h2{font-size:22px;color:#16325c;margin:30px 0 15px;padding-bottom:8px;border-bottom:1px solid #f0f0f0;}
+h3{font-size:19px;color:#16325c;margin:22px 0 12px;}
+p{margin-bottom:20px;text-align:justify;}
+strong{color:#16325c;}
+ul,ol{margin:15px 0 22px 24px;}
+li{margin-bottom:10px;line-height:1.8;}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+th{background:#16325c;color:#fff;padding:10px 8px;text-align:left;}
+td{padding:10px 8px;border-bottom:1px solid #eee;}
+tr:nth-child(even){background:#f9fafb;}
+.tips-block{background:#fff6ec;border-left:5px solid #ff7722;padding:20px;margin-top:30px;border-radius:0 8px 8px 0;}
+.safe-block{background:#f0f7ff;border-left:5px solid #4096ff;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+.warn-block{background:#fff2f0;border-left:5px solid #ff4d4f;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+a{color:#ff7722;text-decoration:none;}
+a:hover{text-decoration:underline;}
+footer{background:#222;color:#aaa;text-align:center;padding:35px 0;margin-top:20px;font-size:14px;}
+@media screen and (max-width: 640px){
+  article{padding:25px 18px;}
+  h1{font-size:22px;}
+  body{font-size:16px;}
+  table{font-size:13px;}
+  th,td{padding:8px 4px;}
+}
+</style>
+</head>
+<body>
+<header><div class="container header-box">
+<div class="logo">滤油机资讯网</div>
+<nav><a href="index.html">首页</a><a href="index.html#article">资讯科普</a><a href="vacuum-oil-filter.html">真空滤油机</a></nav>
+</div></header>
+<div class="container"><article>
+<a class="back" href="index.html">← 返回资讯首页</a>
+<h1>油液清洁度等级怎么看？ISO4406与NAS对照及滤油目标讲清楚</h1>
+<div class="art-info">发布时间：2026-11-17 | 栏目：行业标准</div>
+
+<p>过滤效果好不好，最终要看<strong>油液清洁度等级</strong>，而不是只看油液变清。看懂颗粒度检测报告里的 ISO 4406 代码和 NAS 分级，才能判断滤油是否达标、该循环几次。本文把代码读法、两套体系对照和不同设备的滤油目标讲清楚，供运维和采购参考。</p>
+
+<h2>一、为什么要控制油液清洁度</h2>
+<p>油液中的固体颗粒会划伤阀芯、加剧泵和轴承磨损，是液压和润滑系统故障的重要诱因。油看起来透明不等于颗粒达标，细小颗粒肉眼看不见。滤油机处理后的效果，通常以清洁度等级作为验收依据；等级不达标，继续换油也难以避免元件早期磨损。</p>
+
+<h2>二、ISO 4406 清洁度代码怎么读</h2>
+<p>ISO 4406 用三段数字表示，如 <strong>19/17/14</strong>，每段对应一个粒径门槛，统计每毫升油液中超过该尺寸的颗粒数量。数字越大，颗粒越多；代码按对数制划分，每升高一级，对应的颗粒数量范围大约翻倍。</p>
+<table>
+<tr><th>代码位置</th><th>粒径门槛</th><th>表示含义</th></tr>
+<tr><td>第一位</td><td>≥4µm(c)</td><td>细小颗粒的总体污染水平</td></tr>
+<tr><td>第二位</td><td>≥6µm(c)</td><td>引起磨损的颗粒水平</td></tr>
+<tr><td>第三位</td><td>≥14µm(c)</td><td>大颗粒数量水平</td></tr>
+</table>
+<p>以 19/17/14 为例：≥4µm 约 2500–5000 个/mL，≥6µm 约 640–1300 个/mL，≥14µm 约 80–160 个/mL。代码解读可参考<a href="https://www.hyprofiltration.com/blog/iso-4406-cleanliness-codes" target="_blank" rel="noopener">ISO 4406 代码分级指南</a>。</p>
+
+<h2>三、NAS 1638 等级与 ISO 的对照关系</h2>
+<p>NAS 1638 按不同粒径区间的颗粒数量划分等级，部分国内设备和旧报告仍使用这套编号。两套体系的分级定义不同，只能大致对照，不能简单逐档一一换算。拿到报告时先看清用的是哪套标准，再对照设备要求判断，避免编号混淆。</p>
+
+<h2>四、不同设备建议的清洁度目标</h2>
+<p>清洁度要求随元件精度和压力提高而变严。下表为行业常见参考区间，具体目标仍应以设备厂家样本和油液检测报告为准。</p>
+<table>
+<tr><th>设备类型</th><th>ISO 4406 参考</th><th>说明</th></tr>
+<tr><td>高敏感伺服阀系统</td><td>≤18/13/10</td><td>配合间隙以微米计，要求最严</td></tr>
+<tr><td>比例阀、高压系统（&gt;160bar）</td><td>≤19/14/11</td><td>对磨损颗粒敏感</td></tr>
+<tr><td>叶片泵、柱塞泵组件</td><td>≤18/16/13</td><td>侧重保护泵体与运动元件</td></tr>
+<tr><td>常规工业液压、方向阀/溢流阀</td><td>再放宽一档</td><td>按厂家样本核对目标</td></tr>
+</table>
+<p>滤芯精度档位与这套目标的配合，可参考<a href="2026-11-01.html">滤油机过滤精度对照表</a>；各级滤芯如何拦截不同颗粒，见<a href="2026-11-07.html">滤油机多级过滤原理</a>。</p>
+
+<h2>五、滤油后怎么验收清洁度</h2>
+<ol>
+<li><strong>规范取样：</strong>从固定取样口取油样，使用清洁干燥容器，避免开盖和容器带入二次污染。</li>
+<li><strong>颗粒计数：</strong>用自动颗粒计数器检测，出具 ISO 4406 或 NAS 分级报告。</li>
+<li><strong>对照目标：</strong>把实测等级与设备要求的目标区间比对，未达标则继续循环过滤。</li>
+<li><strong>复测确认：</strong>达标后再取样复测一次，同时核对水分、酸值和黏度，避免只看颗粒单项。</li>
+</ol>
+<div class="safe-block">
+<p>油品清洁度与油质状态要一起判断：颗粒达标但水分高、酸值上升，油液仍可能不适合继续使用。液压油专用机型的结构与适用场景，见<a href="hydraulic-oil-filter-intro.html">液压油滤油机</a>介绍。</p>
+</div>
+
+<h2>六、小结</h2>
+<p>判断<strong>油液清洁度等级</strong>，先读懂 ISO 4406 三段代码和 NAS 分级，再按元件精度确定目标区间。滤油后规范取样、颗粒计数并复测合格，才算真正达到验收要求。选型时把目标清洁度对应的滤芯精度和循环次数一并考虑，过滤效果更有保障。</p>
+
+<div class="tips-block">
+本文梳理了 ISO 4406 与 NAS 1638 清洁度等级的读法、对照和滤油验收要点。更多选型参数、故障排查与运维保养内容，欢迎访问<a href="https://滤油机.cn" target="_blank">滤油机.cn</a>查看。
+</div>
+</article></div>
+<footer><div class="container"><p>© 2026 滤油机资讯网 滤油机.中国 | 工业滤油设备科普、选型、保养知识分享</p></div></footer>
+</body>
+</html>
