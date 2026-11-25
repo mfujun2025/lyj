@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>液压系统冲洗怎么做？滤油机接入、雷诺数与清洁度验收讲清楚</title>
+<meta name="keywords" content="液压系统冲洗,液压系统冲洗步骤,液压系统冲洗规范,冲洗滤芯精度,雷诺数4000,冲洗清洁度验收">
+<meta name="description" content="液压系统冲洗不能靠换油代替。本文按ISO 23309讲清雷诺数4000、1.5倍流量与40℃油温三个硬条件，以及滤油机接入、滤芯逐级递进和取样验收，帮现场把管壁污染冲干净。">
+<link rel="canonical" href="https://滤油机.中国/2026-11-26.html">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72b49dfd810d38b445d9b1ef63f81d4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft Yahei",system-ui,sans-serif;background:#f5f7f9;color:#333;line-height:1.8;font-size:17px;}
+.container{max-width:1100px;margin:0 auto;padding:0 15px;}
+header{background:#16325c;color:#fff;padding:16px 0;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+.header-box{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;}
+.logo{font-size:26px;font-weight:bold;}
+nav a{color:#fff;text-decoration:none;margin-left:26px;}
+nav a:first-child{margin-left:0;}
+nav a:hover{color:#ff7722;}
+article{background:#fff;padding:40px 35px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin:45px auto;max-width:840px;}
+.back{color:#ff7722;text-decoration:none;margin-bottom:25px;display:inline-block;font-weight:500;}
+h1{font-size:28px;color:#16325c;margin-bottom:20px;line-height:1.4;}
+.art-info{font-size:14px;color:#888;margin-bottom:28px;padding-bottom:15px;border-bottom:1px solid #eee;}
+h2{font-size:22px;color:#16325c;margin:30px 0 15px;padding-bottom:8px;border-bottom:1px solid #f0f0f0;}
+h3{font-size:19px;color:#16325c;margin:22px 0 12px;}
+p{margin-bottom:20px;text-align:justify;}
+strong{color:#16325c;}
+ul,ol{margin:15px 0 22px 24px;}
+li{margin-bottom:10px;line-height:1.8;}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+th{background:#16325c;color:#fff;padding:10px 8px;text-align:left;}
+td{padding:10px 8px;border-bottom:1px solid #eee;}
+tr:nth-child(even){background:#f9fafb;}
+.tips-block{background:#fff6ec;border-left:5px solid #ff7722;padding:20px;margin-top:30px;border-radius:0 8px 8px 0;}
+.safe-block{background:#f0f7ff;border-left:5px solid #4096ff;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+.warn-block{background:#fff2f0;border-left:5px solid #ff4d4f;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+a{color:#ff7722;text-decoration:none;}
+a:hover{text-decoration:underline;}
+footer{background:#222;color:#aaa;text-align:center;padding:35px 0;margin-top:20px;font-size:14px;}
+@media screen and (max-width: 640px){
+  article{padding:25px 18px;}
+  h1{font-size:22px;}
+  body{font-size:16px;}
+  table{font-size:13px;}
+  th,td{padding:8px 4px;}
+}
+</style>
+</head>
+<body>
+<header><div class="container header-box">
+<div class="logo">滤油机资讯网</div>
+<nav><a href="index.html">首页</a><a href="index.html#article">资讯科普</a><a href="vacuum-oil-filter.html">真空滤油机</a></nav>
+</div></header>
+<div class="container"><article>
+<a class="back" href="index.html">← 返回资讯首页</a>
+<h1>液压系统冲洗怎么做？滤油机接入、雷诺数与清洁度验收讲清楚</h1>
+<div class="art-info">发布时间：2026-11-26 | 栏目：运维保养 · 系统冲洗</div>
+
+<p>换油、换管、大修后的液压系统，换一箱新油往往冲不干净管壁附着物。液压系统冲洗用紊流剥离污染物再靠过滤带走，本文按 ISO 23309 讲清三个硬条件、滤油机接入与验收。</p>
+
+<h2>一、为什么只换油冲不干净</h2>
+<p>流速低时管壁形成边界层，层内流体几乎停滞，颗粒与油泥贴附在此。换油只排掉箱内游离旧油，管壁附着物和死角沉积仍在系统里。</p>
+<p>新油一加进去，残留迅速把它重新污染，清洁度刚达标又反弹。这是新装管路投运前、换管换泵大修后须冲洗的原因；日常<a href="2026-11-18.html">在线旁路过滤</a>只维持清洁度，冲洗才剥离沉积。</p>
+<h2>二、冲洗有效的三个硬条件</h2>
+<p>ISO 23309:2020（等同采用为 GB/T 25133）要求三个要素同时满足：</p>
+<table>
+<tr><th>参数</th><th>标准要求</th><th>现场做法</th></tr>
+<tr><td>雷诺数 Re</td><td>大于 4000，且不低于运行时的 Re</td><td>按 Re=21220×qv/(d×ν) 反算流量，不够则升温降黏或分段冲洗</td></tr>
+<tr><td>冲洗流量</td><td>不低于工作流量的 1.5 倍</td><td>按最粗管径核算，逐段旁通</td></tr>
+<tr><td>油温</td><td>不低于 40℃</td><td>实践取 50–70℃，VG46 黏度可降至十几 cSt</td></tr>
+<tr><td>冲洗级别</td><td>比目标清洁度（RCL）至少干净一个 ISO 代码</td><td>按 <a href="2026-11-17.html">ISO 4406 清洁度等级</a>设定验收值</td></tr>
+</table>
+<p>条件冲突时优先保证更高的雷诺数。只加大泵不管管径是常见误区，管径越粗 Re 越低。</p>
+
+<h2>三、滤油机怎么接入冲洗回路</h2>
+<p>移动式滤油车、旁路滤油机都能当冲洗泵组，关键在接管与隔离：</p>
+<ol>
+<li><strong>排净旧油：</strong>热态排放更彻底，再用无绒布清理箱底沉积。</li>
+<li><strong>隔离精密元件：</strong>伺服阀、比例阀、蓄能器、传感器拆除或短接。</li>
+<li><strong>接管到位：</strong>吸油口靠箱底避开沉渣；回油管插入液面下并朝对侧箱壁，减少起泡吸空。</li>
+<li><strong>选对介质：</strong>同牌号工作油或低黏度冲洗油，先确认与密封相容，不用柴油、溶剂代替。</li>
+<li><strong>分段冲洗：</strong>按先主管后支管、先远后近顺序逐段引流量。</li>
+</ol>
+
+<h2>四、冲洗滤芯精度怎么选</h2>
+<p>冲洗阶段污染负荷远高于正常运行，滤芯要逐级递进：</p>
+<ul>
+<li><strong>粗冲：</strong>25–50μm，挡住焊渣、锈屑等大颗粒。</li>
+<li><strong>中冲：</strong>换成 10μm，颗粒总量下降后再往下走。</li>
+<li><strong>精冲：</strong>3–5μm，用于最后达标阶段。</li>
+</ul>
+<p>一开始就装 3μm 绝对滤芯，几分钟即堵死，旁通阀开启后油液未经滤直接循环，等于白冲。冲洗滤芯精度应等于或细于系统内置过滤器；压差升到旁通设定值七成左右换芯并记次数。</p>
+
+<h2>五、冲洗到什么时候结束</h2>
+<p>冲洗时长没有固定数字，看取样趋势而不是看钟表：</p>
+<ul>
+<li><strong>循环倍数：</strong>低流速循环 3–5 倍系统容积，让各支路有油流，再升高速冲洗。</li>
+<li><strong>取样位置：</strong>在被冲洗段末端或回油管取样，按 ISO 4021 操作。</li>
+<li><strong>判据：</strong>连续 2–3 次取样达标且颗粒数不再下降才算通过，单次合格可能偶然。</li>
+<li><strong>收尾：</strong>排净冲洗油、拆临时短接、恢复元件、换全新工作滤芯，经 3μm 过滤加注新油，低负荷运行 1–2 小时后复检。</li>
+</ul>
+<p>参考量级：200L 中等污染系统用 12L/min 滤油车冲洗约需 4–8 小时，污染严重时多次换液换芯。</p>
+
+<h2>六、五个常见错误</h2>
+<ul>
+<li>冷油直接排放，黏度高、残油多，带不走多少污染物。</li>
+<li>跳过油箱清理，底泥很快污染新油。</li>
+<li>全程只用细滤芯，频繁旁通，实际过滤时间不足。</li>
+<li>只看一次颗粒计数，把偶然达标当成通过。</li>
+<li>冲洗油留在系统当工作油，污染又带回去。</li>
+</ul>
+
+<h2>七、小结</h2>
+<p>效果取决于紊流强度与过滤效率：雷诺数 4000 以上、流量不低于工作流量 1.5 倍、油温 40℃ 以上同时满足，再加粗冲到精冲的滤芯递进与连续取样验收，污染才带得出去。配置见<a href="hydraulic-oil-filter-intro.html">液压油滤油机</a>专题。</p>
+<p>参数可查阅 <a href="https://www.iso.org/obp/ui/en/#!iso:std:74772:en" target="_blank" rel="noopener">ISO 23309:2020 液压系统管路冲洗方法</a>，操作细节参考 <a href="https://lichydraulic.com/hydraulic-system-flushing/" target="_blank" rel="noopener">液压系统冲洗工程指南</a>。</p>
+
+<div class="warn-block">
+<strong>安全提示：</strong>拆接软管前停机泄压；油温近 70℃ 注意软管与密封件耐温，现场备接油盘。
+</div>
+
+<div class="tips-block">
+本文介绍液压系统冲洗的三个硬条件、滤油机接入方法、滤芯精度递进与验收判据。更多选型参数、故障排查与运维保养内容，欢迎访问<a href="https://滤油机.cn" target="_blank">滤油机.cn</a>查看。
+</div>
+</article></div>
+<footer><div class="container"><p>© 2026 滤油机资讯网 滤油机.中国 | 工业滤油设备科普、选型、保养知识分享</p></div></footer>
+</body>
+</html>
