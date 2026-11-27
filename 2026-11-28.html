@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>变压器油色谱异常怎么处理？先判故障类型，再谈真空脱气</title>
+<meta name="keywords" content="变压器油色谱异常,变压器油色谱分析,乙炔超标,氢气超标,三比值法,变压器油真空脱气">
+<meta name="description" content="色谱超标不等于油坏了。本文讲清变压器油色谱异常的判断层次、乙炔与氢气各指向什么故障，以及真空脱气能做什么、不能做什么和现场操作要点。">
+<link rel="canonical" href="https://滤油机.中国/2026-11-28.html">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72b49dfd810d38b445d9b1ef63f81d4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft Yahei",system-ui,sans-serif;background:#f5f7f9;color:#333;line-height:1.8;font-size:17px;}
+.container{max-width:1100px;margin:0 auto;padding:0 15px;}
+header{background:#16325c;color:#fff;padding:16px 0;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+.header-box{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;}
+.logo{font-size:26px;font-weight:bold;}
+nav a{color:#fff;text-decoration:none;margin-left:26px;}
+nav a:first-child{margin-left:0;}
+nav a:hover{color:#ff7722;}
+article{background:#fff;padding:40px 35px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin:45px auto;max-width:840px;}
+.back{color:#ff7722;text-decoration:none;margin-bottom:25px;display:inline-block;font-weight:500;}
+h1{font-size:28px;color:#16325c;margin-bottom:20px;line-height:1.4;}
+.art-info{font-size:14px;color:#888;margin-bottom:28px;padding-bottom:15px;border-bottom:1px solid #eee;}
+h2{font-size:22px;color:#16325c;margin:30px 0 15px;padding-bottom:8px;border-bottom:1px solid #f0f0f0;}
+h3{font-size:19px;color:#16325c;margin:22px 0 12px;}
+p{margin-bottom:20px;text-align:justify;}
+strong{color:#16325c;}
+ul,ol{margin:15px 0 22px 24px;}
+li{margin-bottom:10px;line-height:1.8;}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+th{background:#16325c;color:#fff;padding:10px 8px;text-align:left;}
+td{padding:10px 8px;border-bottom:1px solid #eee;}
+tr:nth-child(even){background:#f9fafb;}
+.tips-block{background:#fff6ec;border-left:5px solid #ff7722;padding:20px;margin-top:30px;border-radius:0 8px 8px 0;}
+.safe-block{background:#f0f7ff;border-left:5px solid #4096ff;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+.warn-block{background:#fff2f0;border-left:5px solid #ff4d4f;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+a{color:#ff7722;text-decoration:none;}
+a:hover{text-decoration:underline;}
+footer{background:#222;color:#aaa;text-align:center;padding:35px 0;margin-top:20px;font-size:14px;}
+@media screen and (max-width: 640px){
+  article{padding:25px 18px;}
+  h1{font-size:22px;}
+  body{font-size:16px;}
+  table{font-size:13px;}
+  th,td{padding:8px 4px;}
+}
+</style>
+</head>
+<body>
+<header><div class="container header-box">
+<div class="logo">滤油机资讯网</div>
+<nav><a href="index.html">首页</a><a href="index.html#article">资讯科普</a><a href="vacuum-oil-filter.html">真空滤油机</a></nav>
+</div></header>
+<div class="container"><article>
+<a class="back" href="index.html">← 返回资讯首页</a>
+<h1>变压器油色谱异常怎么处理？先判故障类型，再谈真空脱气</h1>
+<div class="art-info">发布时间：2026-11-28 | 栏目：故障排查 · 变压器油</div>
+
+<p>拿到色谱报告看见乙炔或氢气超标，第一反应常常是“叫滤油机来脱气”。但变压器油色谱异常首先要回答的是设备内部出了什么故障，脱气只是善后。</p>
+
+<h2>一、产气的是设备，不是油</h2>
+<p>矿物油在正常温度下稳定。局部过热或放电使 C—H、C—C 键断裂，才生成氢、甲烷、乙烷、乙烯、乙炔，CO 与 CO₂ 主要来自绝缘纸老化。</p>
+<p>油只是“记录介质”。气体脱掉，产气源还在，运行一段时间指标就回升。顺序应是先分析组分，再决定停电检查还是油处理。</p>
+
+<h2>二、报告要看三个层次</h2>
+<table>
+<tr><th>层次</th><th>看什么</th><th>作用</th></tr>
+<tr><td>单次含量</td><td>各组分是否超过注意值</td><td>筛出可疑设备，不能直接定故障</td></tr>
+<tr><td>产气速率</td><td>两次检测间的增长量</td><td>增长快说明故障在发展，比绝对值更关键</td></tr>
+<tr><td>组分比例</td><td>三比值、大卫三角形</td><td>推断故障类型：放电还是过热</td></tr>
+</table>
+<p>国内按 DL/T 722-2014 判断，注意值、产气速率与三比值配套使用。三比值取 C₂H₂/C₂H₄、CH₄/H₂、C₂H₄/C₂H₆，编码组合对应不同故障；某 220 kV 主变编码“202”，诊断为导电回路低能火花放电。</p>
+
+<h2>三、乙炔和氢气各指向什么</h2>
+<p><strong>乙炔（C₂H₂）</strong>只在约 1000℃ 以上高能量电弧下大量生成，热故障一般不会产生。因此检测到乙炔，基本可判定存在电弧或火花放电，如引线接触不良、悬浮电位放电、有载分接开关切换。按 IEEE C57.104 分带，1 ppm 内为正常，9 ppm 以上进入需处理区间，35 ppm 以上宜尽快退出运行。</p>
+<p><strong>氢气（H₂）</strong>主要由局部放电产生，也可能来自油中水分分解，单看容易误判。氢气单独上升而烃类平稳时，要结合局放测量与含水量一起看。</p>
+<div class="warn-block">
+<strong>关键：</strong>出现乙炔，优先安排停电与电气试验（直流电阻、介损、局放）找放电点。此时脱气会把证据抽走，还可能掩盖故障发展。
+</div>
+
+<h2>四、真空脱气能做什么、不能做什么</h2>
+<p>真空脱气依据亨利定律：降低气相分压，溶解气体从油中析出。真空罐压力做到 1 mbar 以下（高真空可到 0.5 mbar），油温 60–75℃，脱气率可达 95% 以上，同时带走溶解水。它能做的是：</p>
+<ul>
+<li>把溶解气体含量降到合格范围，恢复绝缘强度与击穿电压。</li>
+<li>为检修后的设备提供干净、干燥的油，建立新的检测基线。</li>
+<li>处理新油或储运环节吸气的油品。</li>
+</ul>
+<p>它不能做的是：修复已碳化的绝缘纸、消除接触不良的发热点、代替检修。固体绝缘一旦劣化不可在现场恢复，脱气只改善油，不改善纸。</p>
+
+<h2>五、现场操作要点</h2>
+<ol>
+<li><strong>先留样：</strong>处理前留原始油样与报告，脱气后数据才可比对。</li>
+<li><strong>控温：</strong>油温低于 40℃ 黏度大、脱气效率低；高于 80℃ 加速氧化，宁可按 60–75℃ 稳着走。</li>
+<li><strong>真空度要真达标：</strong>用绝压表读数，表压“-0.09 MPa”并不等于高真空，真空抽不上先查漏气与泵油（见<a href="2026-11-19.html">真空度不足排查</a>）。</li>
+<li><strong>循环处理：</strong>单程往往不够，按流量循环 2–3 遍，每遍取样。</li>
+<li><strong>封闭注油：</strong>处理后用真空注油或氮气保护，敞开倒油会重新吸气。</li>
+<li><strong>复测看趋势：</strong>投运 24 小时与 1 周各测一次，若指标回弹说明故障仍在产气。</li>
+</ol>
+<p>取样与检测规范可参考<a href="2026-11-21.html">油液检测取样方法</a>，油品日常维护见<a href="transformer-oil-maintain.html">变压器油保养</a>专题。</p>
+
+<h2>六、四个常见错误</h2>
+<ul>
+<li>只看绝对值不看增长率，把缓慢上升当正常。</li>
+<li>一超标就脱气，故障源没查就复投。</li>
+<li>脱气后不复测，指标回弹才发现问题。</li>
+<li>真空度、油温不记录，处理效果无法追溯。</li>
+</ul>
+
+<h2>七、小结</h2>
+<p>处理逻辑是“先诊断、后处理”：用含量、产气速率、三比值定性质，出现乙炔先停电找放电点，故障处理后用真空脱气恢复油品，再靠复测确认不回弹。数据与判据参考<a href="http://zazhi.chinaet.net/cn/article/pdf/preview/10.19768/j.cnki.dgjs.2026.07.042.pdf" target="_blank" rel="noopener">220 kV 变压器色谱异常分析处置</a>，脱气工艺参数见<a href="https://www.travac.net/transformer-oil-vacuum-degassing/" target="_blank" rel="noopener">真空脱气技术说明</a>。</p>
+
+<div class="tips-block">
+本文梳理变压器油色谱异常的判断层次、乙炔与氢气的故障指向，以及真空脱气的适用边界与操作要点。更多滤油机选型参数、故障排查与运维保养内容，欢迎访问<a href="https://滤油机.cn" target="_blank">滤油机.cn</a>查看。
+</div>
+</article></div>
+<footer><div class="container"><p>© 2026 滤油机资讯网 滤油机.中国 | 工业滤油设备科普、选型、保养知识分享</p></div></footer>
+</body>
+</html>
