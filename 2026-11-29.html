@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>滤油机接地怎么做？静电起电点、接地电阻与操作要点</title>
+<meta name="keywords" content="滤油机接地,滤油机静电,油品静电起电,防静电接地电阻,过滤器静电,滤油机安全操作">
+<meta name="description" content="滤油机自带泵与精细过滤器，是油品静电最集中的环节。本文讲清起电原因、接地电阻要求、软管与流速禁忌和现场检查步骤，帮你把接地做到位。">
+<link rel="canonical" href="https://滤油机.中国/2026-11-29.html">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b72b49dfd810d38b445d9b1ef63f81d4";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft Yahei",system-ui,sans-serif;background:#f5f7f9;color:#333;line-height:1.8;font-size:17px;}
+.container{max-width:1100px;margin:0 auto;padding:0 15px;}
+header{background:#16325c;color:#fff;padding:16px 0;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+.header-box{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;}
+.logo{font-size:26px;font-weight:bold;}
+nav a{color:#fff;text-decoration:none;margin-left:26px;}
+nav a:first-child{margin-left:0;}
+nav a:hover{color:#ff7722;}
+article{background:#fff;padding:40px 35px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.05);margin:45px auto;max-width:840px;}
+.back{color:#ff7722;text-decoration:none;margin-bottom:25px;display:inline-block;font-weight:500;}
+h1{font-size:28px;color:#16325c;margin-bottom:20px;line-height:1.4;}
+.art-info{font-size:14px;color:#888;margin-bottom:28px;padding-bottom:15px;border-bottom:1px solid #eee;}
+h2{font-size:22px;color:#16325c;margin:30px 0 15px;padding-bottom:8px;border-bottom:1px solid #f0f0f0;}
+h3{font-size:19px;color:#16325c;margin:22px 0 12px;}
+p{margin-bottom:20px;text-align:justify;}
+strong{color:#16325c;}
+ul,ol{margin:15px 0 22px 24px;}
+li{margin-bottom:10px;line-height:1.8;}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+th{background:#16325c;color:#fff;padding:10px 8px;text-align:left;}
+td{padding:10px 8px;border-bottom:1px solid #eee;}
+tr:nth-child(even){background:#f9fafb;}
+.tips-block{background:#fff6ec;border-left:5px solid #ff7722;padding:20px;margin-top:30px;border-radius:0 8px 8px 0;}
+.safe-block{background:#f0f7ff;border-left:5px solid #4096ff;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+.warn-block{background:#fff2f0;border-left:5px solid #ff4d4f;padding:20px;margin:20px 0;border-radius:0 8px 8px 0;}
+a{color:#ff7722;text-decoration:none;}
+a:hover{text-decoration:underline;}
+footer{background:#222;color:#aaa;text-align:center;padding:35px 0;margin-top:20px;font-size:14px;}
+@media screen and (max-width: 640px){
+  article{padding:25px 18px;}
+  h1{font-size:22px;}
+  body{font-size:16px;}
+  table{font-size:13px;}
+  th,td{padding:8px 4px;}
+}
+</style>
+</head>
+<body>
+<header><div class="container header-box">
+<div class="logo">滤油机资讯网</div>
+<nav><a href="index.html">首页</a><a href="index.html#article">资讯科普</a><a href="vacuum-oil-filter.html">真空滤油机</a></nav>
+</div></header>
+<div class="container"><article>
+<a class="back" href="index.html">← 返回资讯首页</a>
+<h1>滤油机接地与防静电：为什么过滤器出口最危险，怎么做才合规</h1>
+<div class="art-info">发布时间：2026-11-29 | 栏目：运维保养 · 安全规范</div>
+
+<p>滤油机接地常被当成“接根线”的小事。移动式滤油机自带泵、精滤与软管，正是油品静电最集中的环节。</p>
+
+<h2>一、滤油机为什么是静电高发环节</h2>
+<p>油品在管壁摩擦、被叶轮剪切会带电，主力则是<b>过滤</b>：油流穿过滤材孔隙时电荷被强制分离。滤芯越细、流速越快，出口电荷密度越高。</p>
+<p>低电导率油更危险：新油、干燥油杂质与水分少，电荷泄漏慢，累积更长，越干净反而越容易起电。泵提供剪切、精滤提供分离、移动式机架常缺可靠接地，三个条件正好凑齐。</p>
+
+<h2>二、接地要看两个电阻，别混为一谈</h2>
+<p>按 GB 13348-2009，静电导体与大地的<b>总泄漏电阻</b>通常不大于 1 MΩ；专设<b>静电接地体</b>的接地电阻不宜大于 100 Ω，山区不大于 1000 Ω。</p>
+<p>前者衡量电荷能否走掉，后者衡量接地体做得如何。现场常只测电阻，却漏了设备与地是否导通——油漆、锈层、垫木都可能是断点。</p>
+<div class="warn-block">
+<strong>两条红线：</strong>GB 12158-2006 明确，防静电接地线不得利用电源零线，也不得与防直击雷地线共用。把机壳接到插座零线，是最常见也最危险的错。
+</div>
+
+<h2>三、哪些部位必须接地</h2>
+<table>
+<tr><th>部位</th><th>做法</th><th>依据</th></tr>
+<tr><td>机架与外壳</td><td>必须接地，选裸露金属</td><td>GB 12158 6.1.2</td></tr>
+<tr><td>泵、过滤器</td><td>可靠接地，不得悬空</td><td>GB 13348 4.7.3</td></tr>
+<tr><td>金属管路</td><td>两端及每 200–300 m 处接地</td><td>GB 13348 4.7.1</td></tr>
+<tr><td>软管</td><td>导电管或金属丝网，接前查导通</td><td>GB 13348 4.4.1</td></tr>
+<tr><td>储罐、油桶</td><td>罐体两点以上，间距不超过 30 m；桶与漏斗跨接</td><td>GB 13348 5.1.1</td></tr>
+</table>
+<p>薄弱点在进出油软管：普通橡胶管绝缘，电荷无处泄放；换导电软管后仍要确认两端与机体导通。</p>
+
+<h2>四、光接地不够：流速、缓和时间与静置</h2>
+<p>接地只解决“泄放”，不解决“产生”。工艺参数不控，接地再规范也会被冲垮：</p>
+<ul>
+<li><strong>缓和时间：</strong>油品通过精细过滤器会产生大量静电荷，出口到贮器应留 30 s 缓和时间，不足时加缓和器（3.2.5）。</li>
+<li><strong>初始流速：</strong>电导率低于 50 pS/m 的油品，注入口未浸没前不大于 1 m/s，浸没 200 mm 后可提，最高 7 m/s（4.1.4）。</li>
+<li><strong>静置：</strong>装油完毕，油罐静置 10 min（大于 5000 m³ 时 30 min），罐车 2 min 再取样检尺（4.1.6）。</li>
+<li><strong>取样速度：</strong>采样、检尺不得猛拉快提，上提不超过 0.5 m/s（5.10.4）。</li>
+</ul>
+<p>电导率偏低的油品可加抗静电添加剂提到 250 pS/m 以上（GB 12158 6.3.8），或在管道末端装静电消除器。</p>
+
+<h2>五、现场七步：把接地做到位</h2>
+<ol>
+<li><strong>断电验电：</strong>停泵停加热，挂牌上锁。</li>
+<li><strong>找裸金属：</strong>接地夹夹在无漆无锈金属面，多点独立不串联。</li>
+<li><strong>测两个电阻：</strong>接地电阻仪测接地体（≤100 Ω），万用表测机体到接地极导通（≤1 MΩ）。</li>
+<li><strong>查软管：</strong>导电管或丝网完好、接头导通，开裂即换。</li>
+<li><strong>定流速：</strong>进油管插到罐底或液面下，初始 1 m/s，稳定后再提。</li>
+<li><strong>守静置：</strong>运行中不开盖取样、不检尺，停机静置后操作，工具接地。</li>
+<li><strong>留记录：</strong>电阻测试日期、软管编号、流速写入台账，随<a href="oil-filter-maintain.html">滤油机保养维护</a>周期复查。</li>
+</ol>
+<div class="safe-block">
+<strong>风险分级：</strong>变压器油、液压油闪点高，静电放电引燃概率低，接地更多是防电击、保护传感器与满足防雷、电气保护要求；处理溶剂、轻质油或在油罐区作业时，静电才是点火源，要求须严格执行。
+</div>
+
+<h2>六、五个常见错误</h2>
+<ul>
+<li>接地夹夹在油漆或保温层，读数正常却不导通。</li>
+<li>几台设备串一根线，中间松脱即全线悬浮。</li>
+<li>用电源零线代替静电地线，违反 GB 12158。</li>
+<li>用普通橡胶管抽油，电荷没有泄放路径。</li>
+<li>机器运行中就开盖取样、检尺，电荷尚未消散。</li>
+</ul>
+
+<h2>七、小结</h2>
+<p>滤油机接地的顺序是：先认起电点（精滤与软管），再查导通（机体、泵、过滤器逐点跨接），再测电阻（≤100 Ω，山区 1000 Ω），最后管工艺（1 m/s 起流、30 s 缓和、静置后取样）。开机的检查习惯见<a href="2026-11-20.html">滤油机初次投运开机检查</a>，油中水分的影响见<a href="2026-11-15.html">液压油进水乳化处理</a>。</p>
+<p>标准原文见<a href="https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3691/site/picture/old/P020190523589291507134.pdf" target="_blank" rel="noopener">GB 13348-2009 液体石油产品静电安全规程</a>与<a href="http://www.cqjlp.gov.cn/bmjz/qzfbm_97119/qyjj_97729/zwgk_97124/fdzdgknr_97126/jdjc/jcyj/202208/P020220818363812167708.pdf" target="_blank" rel="noopener">GB 12158-2006 防止静电事故通用导则</a>。</p>
+
+<div class="tips-block">
+本文梳理起电位置、接地电阻要求、流速与静置参数及现场检查步骤。更多滤油机安全操作与运维保养内容，欢迎访问<a href="https://滤油机.cn" target="_blank">滤油机.cn</a>查看。
+</div>
+</article></div>
+<footer><div class="container"><p>© 2026 滤油机资讯网 滤油机.中国 | 工业滤油设备科普、选型、保养知识分享</p></div></footer>
+</body>
+</html>
